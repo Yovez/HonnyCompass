@@ -6,8 +6,9 @@ import honny.dependings.betonquest.CompassLocations;
 import honny.utils.AngleUtil;
 import lombok.Setter;
 import me.clip.placeholderapi.PlaceholderAPI;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.boss.BossBar;
 import org.bukkit.entity.Player;
@@ -146,13 +147,13 @@ public class PlayerCompass {
         if (targetName != null) {
             if (targetSelected)
                 bossBarMessage.setTitle(mainConfig.getTitleMessageSelected().replace(
-                        "{name}", targetName
+                        "{name}", ChatColor.translateAlternateColorCodes('&', targetName)
                 ).replace(
                         "{distance}", Double.toString(Math.round(distance))
                 ));
             else
                 bossBarMessage.setTitle(mainConfig.getTitleMessage().replace(
-                        "{name}", targetName
+                        "{name}", ChatColor.translateAlternateColorCodes('&', targetName)
                 ).replace(
                         "{distance}", Double.toString(Math.round(distance))
                 ));
@@ -160,5 +161,9 @@ public class PlayerCompass {
         } else {
             bossBarMessage.setVisible(false);
         }
+    }
+
+    public void setTargetLocation(Location targetLocation) {
+        this.targetLocation = targetLocation;
     }
 }

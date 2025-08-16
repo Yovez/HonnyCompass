@@ -158,6 +158,162 @@ public class MainConfigManager {
         return allSection;
     }
 
+    public BarColor getBarColor() {
+        return barColor;
+    }
+
+    public BarStyle getBarStyle() {
+        return barStyle;
+    }
+
+    public String getNorth() {
+        return north;
+    }
+
+    public String getNorthSelected() {
+        return northSelected;
+    }
+
+    public String getEast() {
+        return east;
+    }
+
+    public String getEastSelected() {
+        return eastSelected;
+    }
+
+    public String getSouth() {
+        return south;
+    }
+
+    public String getSouthSelected() {
+        return southSelected;
+    }
+
+    public String getWest() {
+        return west;
+    }
+
+    public String getWestSelected() {
+        return westSelected;
+    }
+
+    public String getFill() {
+        return fill;
+    }
+
+    public String getFillCenter() {
+        return fillCenter;
+    }
+
+    public String getFillSelect() {
+        return fillSelect;
+    }
+
+    public String getFillCenterSelect() {
+        return fillCenterSelect;
+    }
+
+    public String getCompassTarget() {
+        return compassTarget;
+    }
+
+    public String getCompassTargetSelected() {
+        return compassTargetSelected;
+    }
+
+    public String getCompassTargetAbove() {
+        return compassTargetAbove;
+    }
+
+    public String getCompassTargetSelectedAbove() {
+        return compassTargetSelectedAbove;
+    }
+
+    public String getCompassTargetBelow() {
+        return compassTargetBelow;
+    }
+
+    public String getCompassTargetSelectedBelow() {
+        return compassTargetSelectedBelow;
+    }
+
+    public String getSelectedCompassTarget() {
+        return selectedCompassTarget;
+    }
+
+    public String getSelectedCompassTargetSelected() {
+        return selectedCompassTargetSelected;
+    }
+
+    public String getSelectedCompassTargetAbove() {
+        return selectedCompassTargetAbove;
+    }
+
+    public String getSelectedCompassTargetSelectedAbove() {
+        return selectedCompassTargetSelectedAbove;
+    }
+
+    public String getSelectedCompassTargetBelow() {
+        return selectedCompassTargetBelow;
+    }
+
+    public String getSelectedCompassTargetSelectedBelow() {
+        return selectedCompassTargetSelectedBelow;
+    }
+
+    public String getSymbolStart() {
+        return symbolStart;
+    }
+
+    public String getSymbolEnd() {
+        return symbolEnd;
+    }
+
+    public String getPrefixString() {
+        return prefixString;
+    }
+
+    public String getPrefixFormatString() {
+        return prefixFormatString;
+    }
+
+    public String getPostfixString() {
+        return postfixString;
+    }
+
+    public String getPostfixFormatString() {
+        return postfixFormatString;
+    }
+
+    public String getTitleMessage() {
+        return titleMessage;
+    }
+
+    public String getTitleMessageSelected() {
+        return titleMessageSelected;
+    }
+
+    public int getCompassLocationsUpdateDelaySeconds() {
+        return compassLocationsUpdateDelaySeconds;
+    }
+
+    public int getTicksUpdateCompass() {
+        return ticksUpdateCompass;
+    }
+
+    public double getYDifferenceIcons() {
+        return yDifferenceIcons;
+    }
+
+    public List<String> getOriginCompass() {
+        return originCompass;
+    }
+
+    public Map<String, String> getReplacers() {
+        return replacers;
+    }
+
     private static String getString(FileConfiguration config, String path, String defaultValue) {
         String value = config.getString(path);
         if (value == null) return defaultValue;

@@ -87,6 +87,30 @@ public final class HonnyCompass extends JavaPlugin {
         this.getLogger().info("§dConfig loaded");
     }
 
+    public static HonnyCompass getInstance() {
+        return instance;
+    }
+
+    public CompassLocations getCompassLocations() {
+        return compassLocations;
+    }
+
+    public Optional<AuthMeApi> getOptionalAuthMeApi() {
+        return optionalAuthMeApi;
+    }
+
+    public Optional<BetonQuest> getOptionalBetonQuest() {
+        return optionalBetonQuest;
+    }
+
+    public Map<UUID, PlayerCompass> getCompasses() {
+        return compasses;
+    }
+
+    public MainConfigManager getMainConfig() {
+        return mainConfig;
+    }
+
     public PlayerCompass createCompass(Player player) {
         PlayerCompass playerCompass = new PlayerCompass(player);
         this.compasses.put(player.getUniqueId(), playerCompass);
