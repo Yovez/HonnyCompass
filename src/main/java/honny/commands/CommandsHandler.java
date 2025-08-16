@@ -11,7 +11,7 @@ public class CommandsHandler implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
-            if (sender instanceof Player && !(sender.hasPermission("honnycompass.reload") || sender.isOp())) {
+            if (!sender.hasPermission("honnycompass.reload")) {
                 sender.sendMessage("§cYou don't have permissions.");
                 return true;
             }
